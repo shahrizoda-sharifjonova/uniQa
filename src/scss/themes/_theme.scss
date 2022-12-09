@@ -36,6 +36,9 @@ a{
 ul{
     list-style: none;
 }
+p{
+    margin-bottom: 0;
+}
 .info{
     position: relative;
     width: 490px;
@@ -78,7 +81,6 @@ ul{
         bottom: -1px;
         background: #FFFFFF;
         box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);
-        transform: rotate(-3deg);
         border: 1px solid #0C87F1;
         border-radius: 50%;
         z-index: -1;
@@ -115,7 +117,7 @@ ul{
         margin-bottom: 0;
         @include media(1200){
             max-width: 310px;
-            font-size: 21px;
+            font-size: 20px;
         }
         @include media(768){
             font-size: 16px;

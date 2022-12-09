@@ -1,9 +1,10 @@
 .cards{
-    padding-top: 100px;
+    padding-top: 200px;
     padding-bottom: 200px;
     position: relative;
     @include media(1200){
         padding-bottom: 100px;
+        padding-top: 120px;
     }
     @include media(768){
         padding-top: 80px;
@@ -11,7 +12,7 @@
     &::before{
         content: '';
         position: absolute;
-        top: 50%;
+        top: 45%;
         transform: translateY(-50%);
         background: url(../img/intro-rocket.png) center / cover no-repeat;
         height: 1785px;
@@ -36,11 +37,11 @@
             background: url(../img/cards-figure-5.png) top / contain no-repeat;
             left: 0;
             width: 100%;
-            top: 55%;
+            top: 58%;
         }
         @include media(445){
             background: url(../img/cards-figure-sm.png) top / contain no-repeat;
-            top: 65%;
+            top: 70%;
         }
     }
     &__body{
