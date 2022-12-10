@@ -1149,6 +1149,96 @@
   border-radius: 100px;
 }
 
+.do {
+  padding-bottom: 120px;
+}
+
+.do__desc {
+  max-width: 723px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #222222;
+  padding: 1px 6px;
+  background: -o-linear-gradient(134.84deg, rgba(12, 135, 241, 0.2) 17.95%, rgba(99, 203, 242, 0.2) 75.81%);
+  background: linear-gradient(315.16deg, rgba(12, 135, 241, 0.2) 17.95%, rgba(99, 203, 242, 0.2) 75.81%);
+  margin-bottom: 40px;
+}
+
+.do__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.do__card {
+  border-radius: 50% !important;
+  width: 386px;
+  height: 386px;
+  padding: 93px 69px;
+  border: 1px solid #148DF2;
+  border-left: 1px solid #148DF2 !important;
+  position: relative;
+}
+
+.no-webp .do__card::before {
+  background: url(../img/intro-star.png) center/cover no-repeat; }
+
+.do__card::before {
+  content: "";
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  top: 12px;
+  right: 24px;
+}
+
+.do__card:not(:last-of-type) {
+  margin-right: 30px;
+}
+
+.no-webp .do__card:not(:last-of-type)::after {
+  background: url(../img/consult-line.png) center/cover no-repeat; }
+
+.do__card:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 28px;
+  bottom: 6px;
+  right: -85px;
+}
+
+.no-webp .do__card:nth-of-type(2)::after {
+  background: url(../img/consult-line-2.png) center/cover no-repeat !important; }
+
+.do__card:nth-of-type(2)::after {
+  top: 0;
+  width: 133px;
+  height: 42px;
+}
+
+.do__subtitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222222;
+  margin-bottom: 32px;
+}
+
+.do__p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #222222;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1351,6 +1441,16 @@ p {
   .consult__content {
     padding: 64px 80px;
   }
+
+  .do__card {
+    width: 50px;
+    height: 350px;
+    padding: 64px;
+  }
+
+  .do__subtitle {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1475,6 +1575,47 @@ p {
     font-size: 27px;
     line-height: 34px;
     margin-bottom: 32px;
+  }
+
+  .do__desc {
+    margin-bottom: 60px;
+  }
+
+  .do__card {
+    border-radius: 30px !important;
+    padding: 40px 24px;
+    height: auto;
+  }
+
+  .do__card::before {
+    right: -3px;
+    top: -23px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .no-webp .do__card:not(:last-of-type)::after {
+    background: url(../img/consult-line.png) center/contain no-repeat; }
+
+  .do__card:not(:last-of-type)::after {
+    height: 30px;
+    width: 135px;
+    bottom: -35px;
+    -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+
+  .do__card:nth-of-type(2)::after {
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+    width: 133px;
+    height: 42px;
+    -webkit-transform: rotate(-8deg);
+        -ms-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+    top: -40px;
   }
 
   .info {
@@ -1782,6 +1923,30 @@ p {
   .consult__btn {
     padding: 18px 33px;
   }
+
+  .do {
+    padding-bottom: 100px;
+  }
+
+  .do__desc {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .do__card:not(:last-of-type) {
+    margin-right: 15px;
+  }
+
+  .do__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .do__p {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1936,6 +2101,52 @@ p {
   .consult__btn {
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .do {
+    padding-bottom: 80px;
+  }
+
+  .do__desc {
+    margin-bottom: 44px;
+  }
+
+  .do__group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .do__card {
+    width: 100%;
+  }
+
+  .do__card:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 28px;
+  }
+
+  .no-webp .do__card:not(:last-of-type)::after {
+    background: url(../img/consult-figure-md.png) center/contain no-repeat; }
+
+  .do__card:not(:last-of-type)::after {
+    height: 38px;
+    width: 16px;
+    left: 0;
+    bottom: -38px;
+  }
+
+  .no-webp .do__card:nth-of-type(2)::after {
+    background: url(../img/consult-figure-2-md.png) center/cover no-repeat !important; }
+
+  .do__card:nth-of-type(2)::after {
+    height: 38px;
+    width: 16px;
+    right: 0;
+    left: auto;
+    bottom: -38px;
+    top: auto;
   }
 
   .info {
@@ -2167,11 +2378,22 @@ p {
 
 .webp .consult__content::before { background: url(../img/consult-figure.webp) center/cover no-repeat; }
 
+.webp .do__card::before { background: url(../img/intro-star.webp) center/cover no-repeat; }
+
+.webp .do__card:not(:last-of-type)::after { background: url(../img/consult-line.webp) center/cover no-repeat; }
+
+.webp .do__card:nth-of-type(2)::after { background: url(../img/consult-line-2.webp) center/cover no-repeat !important; }
+
 .webp .info::before { background: url(../img/intro-star.webp) center/cover no-repeat; }
 
 @media (max-width: 1200px) {
 
   .webp .consult__content::before { background: url(../img/consult-figure.webp) top/contain no-repeat; }
+}
+
+@media (max-width: 1200px) {
+
+  .webp .do__card:not(:last-of-type)::after { background: url(../img/consult-line.webp) center/contain no-repeat; }
 }
 
 @media (max-width: 992px) {
@@ -2187,6 +2409,16 @@ p {
 @media (max-width: 768px) {
 
   .webp .cards::before { background: url(../img/cards-figure-3.webp) top/contain no-repeat; }
+}
+
+@media (max-width: 768px) {
+
+  .webp .do__card:not(:last-of-type)::after { background: url(../img/consult-figure-md.webp) center/contain no-repeat; }
+}
+
+@media (max-width: 768px) {
+
+  .webp .do__card:nth-of-type(2)::after { background: url(../img/consult-figure-2-md.webp) center/cover no-repeat !important; }
 }
 
 @media (max-width: 670px) {
