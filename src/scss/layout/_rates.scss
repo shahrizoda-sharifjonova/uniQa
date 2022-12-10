@@ -1,0 +1,301 @@
+.rates{
+    padding-bottom: 120px;
+    @include media(992){
+        padding-bottom: 100px;
+    }
+    @include media(768){
+        padding-bottom: 80px;
+    }
+    &__desc{
+        padding: 1px 6px;
+        background: linear-gradient(92.21deg, rgba(255, 141, 50, 0.2) 11.42%, rgba(255, 121, 13, 0.2) 95.37%);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 27px;
+        color: #222222;
+        margin-bottom: 120px;
+    }
+    &__group{
+        display: flex;
+        align-items: flex-start;
+        @include media(992){
+            flex-direction: column;
+        }
+    }
+    &__card{
+        border-radius: 50px !important;
+        border-top-right-radius: 35px !important;
+        padding: 0 40px 64px 40px;
+        @include media(1200){
+            padding: 0 24px 32px 24px;
+        }
+        &:not(:last-of-type){
+            margin-right: 30px;
+            @include media(992){
+                margin-right: 0;
+                margin-bottom: 85px;
+            }
+        }
+        &.black{
+            border: 1px solid #2e2e2e;
+        }
+        &.orange{
+            border: 1px solid #ff8e32;
+            border-left: 1px solid #ff8e32 !important;
+        }
+        &.blue{
+            border: 1px solid #35a7f2;
+            border-left: 1px solid #35a7f2 !important;
+        }
+    }
+    &__top{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        position: relative;
+        isolation: isolate;
+        margin-left: -40px;
+        margin-right: -40px;
+        transform: translateY(-28%);
+        width: calc(100% + 80px);
+        @include media(1200){
+            margin-left: -24px;
+            margin-right: -24px;
+            width: calc(100% + 48px);
+            height: 130px;
+        }
+        &.black{
+            &::before{
+                background: linear-gradient(343.17deg, #222222 9.31%, #343434 87.75%);
+                box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);
+            }
+        }
+        &.orange{
+            &::before{
+                background: linear-gradient(92.21deg, #FF8D32 11.42%, #FF790D 95.37%);
+                box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);
+            }
+        }
+        &.blue{
+            &::before{
+                background: linear-gradient(315.16deg, #0C87F1 17.95%, #63CBF2 75.81%);
+                box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);
+            }
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            z-index: -1;
+            transform: rotate(-3deg);
+        }
+        &-title{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+    &__list{
+        padding-left: 0;
+        margin-bottom: 40px;
+    }
+    &__li{
+        position: relative;
+        padding-left: 16px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: rgba(34, 34, 34, 0.6);
+        &.star{
+            padding-left: 0;
+            display: flex;
+            align-items: flex-start;
+            svg{
+                min-width: 20px;
+                width: 20px;
+                margin-right: 8px;
+            }
+            &::before{
+                display: none;
+            }
+            &::marker{
+                font-size: 0px;
+            }
+        }
+        &.orange{
+            &::before{
+                background: linear-gradient(92.21deg, #FF8D32 11.42%, #FF790D 95.37%);
+            }
+        }
+        &.blue{
+            &::before{
+                background: linear-gradient(315.16deg, #0C87F1 17.95%, #63CBF2 75.81%);
+            }
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 7px;
+            left: 0;
+            background: linear-gradient(343.17deg, #222222 9.31%, #343434 87.75%);
+            border-radius: 10px;
+        }
+        &:not(:last-of-type){
+            margin-bottom: 8px;
+        }
+    }
+    &__subtitle{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: #222222;
+        margin-bottom: 16px;
+        &.orange{
+            color: #FF790D;
+        }
+        &.blue{
+            color: #3BACF1;
+        }
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #222222;
+        margin-bottom: 40px;
+    }
+    &__price{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        text-transform: uppercase;
+        background: linear-gradient(343.17deg, #222222 9.31%, #343434 87.75%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 8px;
+        &.orange{
+            background: linear-gradient(92.21deg, #FF8D32 11.42%, #FF790D 95.37%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        &.blue{
+            background: linear-gradient(315.16deg, #0C87F1 17.95%, #63CBF2 75.81%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    &__txt{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        color: #222222;
+        margin-bottom: 40px;
+    }
+    &__items{
+        display: flex;
+        align-items: flex-start;
+        column-gap: 30px;
+        @include media(1200){
+            flex-direction: column;
+        }
+    }
+    &__infos{
+        background: linear-gradient(92.21deg, rgba(255, 141, 50, 0.1) 11.42%, rgba(255, 121, 13, 0.1) 95.37%);
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);
+        border-radius: 50px;
+        border: 1px solid #FF7A0E;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 24px 21px 27px 21px;
+        margin-bottom: 40px;
+        &-p{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            background: linear-gradient(92.21deg, #FF8D32 11.42%, #FF790D 95.37%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    &__info{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        color: #222222;
+        margin-bottom: 16px;
+        span{
+            background: linear-gradient(92.21deg, #FF8D32 11.42%, #FF790D 95.37%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    &__btn{
+        padding: 18px 12px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: linear-gradient(343.17deg, #222222 9.31%, #343434 87.75%);
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+        @include media(992){
+            padding: 18px 33px;
+        }
+        @include media(768){
+            font-size: 14px;
+            line-height: 17px;
+        }
+        @include media(575){
+            width: 100%;
+        }
+        @include media(360){
+            padding: 18px;
+        }
+        &:hover{
+            background: #fff;
+        }
+        &.orange{
+            background: linear-gradient(92.21deg, #FF8D32 11.42%, #FF790D 95.37%);
+        }
+        &.blue{
+            background: linear-gradient(315.16deg, #0C87F1 17.95%, #63CBF2 75.81%);
+        }
+    }
+}
