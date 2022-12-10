@@ -26,6 +26,9 @@
             flex-direction: column;
             padding: 40px 24px;
         }
+        @include media(768){
+            border-radius: 30px;
+        }
         &::before{
             content: '';
             position: absolute;
@@ -53,6 +56,26 @@
                 height: 160px;
             }
         }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: url(../img/consult-circle.png) center / cover no-repeat;
+            top: 45px;
+            left: 78px;
+            z-index: -1;
+            @include media(1200){
+                width: 58px;
+                height: 58px;
+                top: 34px;
+                left: 20px;
+            }
+            @include media(768){
+                top: 20px;
+                left: 13px;
+            }
+        }
     }
     &__left{
         margin-right: 60px;
@@ -61,6 +84,7 @@
         }
         @include media(992){
             width: 100%;
+            margin-right: 0;
         }
     }
     &__title{
@@ -121,6 +145,9 @@
         @include media(768){
             font-size: 14px;
             line-height: 17px;
+        }
+        @include media(360){
+            padding: 18px;
         }
     }
 }
