@@ -1,2 +1,25 @@
 mixin footer()
     footer.footer  
+        .footer__body.container 
+            .footer__col
+                a(href="index.html").footer__logo 
+                    img(src="@img/footer-logo.png", alt="" draggable="false")
+                p.footer__desc.disable-md 2022 © All rights reserved
+            ul.footer__col.footer__list   
+                li.footer__li 
+                    a(href="#!").footer__link Home  
+                li.footer__li 
+                    a(href="#!").footer__link How it works  
+                li.footer__li 
+                    a(href="#!").footer__link Case studies  
+                li.footer__li 
+                    a(href="#!").footer__link What we do
+                li.footer__li 
+                    a(href="#!").footer__link Rates
+            .footer__col 
+                a(href="tel::3(14)074-58-91").footer__phone 3(14)074-58-91
+                a(href="tel::3(14)074-58-91").footer__btn #[span Back call]
+                p.footer__mail E-mail: #[a(mailto::uniqa&uniqa@gmail.com) uniqa&uniqa@gmail.com]
+                p.footer__desc.enable-md 2022 © All rights reserved
+
+                
