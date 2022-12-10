@@ -52,6 +52,9 @@ p{
     @include media(1200){
         width: 390px;
     }
+    @include media(768){
+        height: 130px;
+    }
     @include media(575){
         margin-left: auto;
         margin-right: auto;
