@@ -107,10 +107,18 @@
         background: linear-gradient(92.21deg, #FF8D32 11.42%, #FF790D 95.37%);
         box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
         border-radius: 100px;
+        transition: 300ms ease;
         @include media(575){
             width: 100%;
             font-size: 14px;
             line-height: 17px;
+        }
+        &:hover{
+            text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.5);
+        }
+        &:active{
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12), inset 0px 4px 10px rgba(0, 0, 0, 0.15);
+            text-shadow: none;
         }
     }
     &__right{

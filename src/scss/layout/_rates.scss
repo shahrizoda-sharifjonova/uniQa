@@ -18,6 +18,7 @@
     &__group{
         display: flex;
         align-items: flex-start;
+        margin-bottom: 0;
         @include media(992){
             flex-direction: column;
         }
@@ -26,8 +27,36 @@
         border-radius: 50px !important;
         border-top-right-radius: 35px !important;
         padding: 0 40px 64px 40px;
+        position: relative;
         @include media(1200){
             padding: 0 24px 32px 24px;
+        }
+        @include media(992){
+            border-top-right-radius: 10px !important;
+        }
+        @include media(575){
+            border-top-right-radius: 15px!important;
+            border-top-left-radius: 55px!important;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 72px;
+            height: 72px;
+            background: url(../img/rates-star-orange.png) center / cover no-repeat;
+            top: -45px;
+            left: 0;
+            z-index: 1;
+            @include media(992){
+                top: -60px;
+            }
+            @include media(768){
+                width: 60px;
+                height: 60px;
+            }
+            @include media(575){
+                top: -38px;
+            }
         }
         &:not(:last-of-type){
             margin-right: 30px;
@@ -42,10 +71,16 @@
         &.orange{
             border: 1px solid #ff8e32;
             border-left: 1px solid #ff8e32 !important;
+            &::before{
+                background: url(../img/rates-star-blue.png) center / cover no-repeat;
+            }
         }
         &.blue{
             border: 1px solid #35a7f2;
             border-left: 1px solid #35a7f2 !important;
+            &::before{
+                background: url(../img/rates-star-black.png) center / cover no-repeat;
+            }
         }
     }
     &__top{
@@ -61,11 +96,22 @@
         margin-right: -40px;
         transform: translateY(-28%);
         width: calc(100% + 80px);
+        padding: 0 20px;
         @include media(1200){
-            margin-left: -24px;
-            margin-right: -24px;
-            width: calc(100% + 48px);
+            margin-left: -25px;
+            margin-right: -25px;
+            width: calc(100% + 50px);
             height: 130px;
+        }
+        @include media(992){
+            height: 165px;
+            width: calc(100% + 50px);
+            transform: translateY(-38%);
+        }
+        @include media(575){
+            transform: translateY(-34%);
+            height: 130px;
+            padding: 0 40px;
         }
         &.black{
             &::before{
@@ -93,6 +139,9 @@
             border-radius: 50%;
             z-index: -1;
             transform: rotate(-3deg);
+            @include media(575){
+                height: 115px !important;
+            }
         }
         &-title{
             font-family: 'Montserrat';
@@ -102,11 +151,19 @@
             line-height: 29px;
             text-align: center;
             color: #FFFFFF;
+            @include media(575){
+                font-size: 20px;
+                line-height: 24px;
+            }
         }
     }
     &__list{
         padding-left: 0;
         margin-bottom: 40px;
+        @include media(575){
+            margin-top: -20px;
+            margin-bottom: 24px;
+        }
     }
     &__li{
         position: relative;
@@ -115,6 +172,10 @@
         font-size: 16px;
         line-height: 22px;
         color: rgba(34, 34, 34, 0.6);
+        @include media(575){
+            font-size: 14px;
+            line-height: 19px;
+        }
         &.star{
             padding-left: 0;
             display: flex;
@@ -164,6 +225,10 @@
         text-align: center;
         color: #222222;
         margin-bottom: 16px;
+        @include media(575){
+            font-size: 20px;
+            line-height: 24px;
+        }
         &.orange{
             color: #FF790D;
         }
@@ -177,6 +242,11 @@
         line-height: 22px;
         color: #222222;
         margin-bottom: 40px;
+        @include media(575){
+            font-size: 14px;
+            line-height: 19px;
+            margin-bottom: 24px;
+        }
     }
     &__price{
         font-family: 'Montserrat';
@@ -191,6 +261,11 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         margin-bottom: 8px;
+        @include media(575){
+            font-size: 28px;
+            line-height: 34px;
+            margin-bottom: 12px;
+        }
         &.orange{
             background: linear-gradient(92.21deg, #FF8D32 11.42%, #FF790D 95.37%);
             -webkit-background-clip: text;
@@ -211,6 +286,11 @@
         text-align: center;
         color: #222222;
         margin-bottom: 40px;
+        @include media(575){
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 24px;
+        }
     }
     &__items{
         display: flex;
@@ -218,6 +298,7 @@
         column-gap: 30px;
         @include media(1200){
             flex-direction: column;
+            align-items: center;
         }
     }
     &__infos{
@@ -275,6 +356,7 @@
         width: 100%;
         margin-bottom: 40px;
         text-align: center;
+        transition: 300ms ease;
         @include media(992){
             padding: 18px 33px;
         }
@@ -284,18 +366,24 @@
         }
         @include media(575){
             width: 100%;
+            margin-bottom: 24px;
         }
         @include media(360){
             padding: 18px;
-        }
-        &:hover{
-            background: #fff;
         }
         &.orange{
             background: linear-gradient(92.21deg, #FF8D32 11.42%, #FF790D 95.37%);
         }
         &.blue{
             background: linear-gradient(315.16deg, #0C87F1 17.95%, #63CBF2 75.81%);
+        }
+        &:hover{
+            text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.5);
+            color: #FFFFFF;
+        }
+        &:active{
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12), inset 0px 4px 10px rgba(0, 0, 0, 0.15);
+            text-shadow: none;
         }
     }
 }
